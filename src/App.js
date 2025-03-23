@@ -1,14 +1,15 @@
 import './App.css';
 import './index.css';
-import StateChange from './state';
+import Event from './event';
 import {Component} from 'react';
 
 class App extends Component{
   render(){
     return (
-      <>
-      <StateChange/>
-      </>
+      <div className='App'>
+      {/* <StateChange/> */}
+      < Event/>
+      </div>
     );
   }
 }
