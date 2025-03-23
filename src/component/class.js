@@ -1,9 +1,11 @@
-import react ,{Component} from 'react';
-class Ccomponent extends Component{
-    render(){
-        return (
-            <h1>class component</h1>
-        );
-    }
+import react ,{Component} from 'react'
+class ComponentPage extends Component{
+  render(){
+    return (
+      <h1>
+        the components page
+      </h1>
+    );
+  }
 }
-export default Ccomponent;
+export default ComponentPage;

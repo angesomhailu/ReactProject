@@ -1,14 +1,15 @@
-//import logo from './logo.svg';
-import './App.css'
-import Fcomponent from './component/function';
-import Ccomponent from './component/class'
-function App() {
-  return (
-    <div className="App">
-      <Fcomponent/>
-      <Ccomponent/>
-    </div>
-  );
-}
+import './App.css';
+import './index.css';
+import StateChange from './state';
+import {Component} from 'react';
 
+class App extends Component{
+  render(){
+    return (
+      <>
+      <StateChange/>
+      </>
+    );
+  }
+}
 export default App;

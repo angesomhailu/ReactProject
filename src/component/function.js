@@ -1,9 +1,9 @@
-
-function Fcomponent(){
+function FunctionPage(){
     return (
-        <div>
-            <h1>the function component page</h1>
-        </div>
+        <h1> 
+            the functins page
+        </h1>
     );
+
 }
-export default Fcomponent;
+export default FunctionPage;
