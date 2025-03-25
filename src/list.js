@@ -9,10 +9,17 @@ class List extends Component{
         }
     }
     render() {
+
+        const change={
+            color:'red',
+            backgroundColor:'green',
+            fontSize:'60px'
+        }
+
         return (
             <div>
                 {
-                    this.state.subject.map((x, index) => <h1  key={index}>{x}</h1>)
+                    this.state.subject.map((x, index) => <h1  style={change}  key={index}>{x}</h1>)
                 }
             </div>
         );
