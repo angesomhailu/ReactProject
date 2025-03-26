@@ -20,50 +20,48 @@ const App =()=>{
       <div className='App'> 
         <Router>
           <div className='nav'>
-            <Link to='/'>Home</Link>
-            <Link to='/components/ContactUs'>Contact </Link>
-            <Link to='/components/Services'>Services</Link>
-            <Link to='/components/About'>About</Link>
-            <Link to='/components/Settings'>Settings</Link>
-            <Link to='/components/Profile'>Profile</Link>
-            <Link to='/components/Register'>Register</Link>
-            <Link to='/components/Login'>Login</Link> 
-            <Link to='/components/Logout'>Logout</Link>
-           {/* <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Angesom Car Rental </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-       
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Setting</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> */}
+           
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <Link class="navbar-brand" ><h3>ANGESOM CAR RENTAL</h3></Link>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <Link to='/' class="nav-link active" aria-current="page" >Home</Link>
+              </li>
+              <li class="nav-item">
+                <Link to='/components/ContactUs' class="nav-link" >Contact</Link>
+              </li>
+              <li class="nav-item">
+                <Link  to='/components/Services' class="nav-link" >Services</Link>
+              </li>
+              <li class="nav-item">
+                <Link to='/components/About' class="nav-link" >About</Link>
+              </li>
+              <li class="nav-item">
+                <Link to='/components/Register' class="nav-link" >Register</Link>
+              </li>
+              <li class="nav-item">
+                <Link to='/components/Login' class="nav-link" >Login</Link>
+              </li>
+            
+              <li class="nav-item dropdown text-align float-end">
+                <Link class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  info
+                </Link>
+                <ul class="dropdown-menu">
+                  <li><Link to='/components/Settings' class="dropdown-item" >Setting</Link></li>
+                  <li><Link to='/components/Profile'class="dropdown-item" >Profile</Link></li>
+                  <li><Link to='/components/Logout' class="dropdown-item" >Logout</Link></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
           </div>
           
           <Routes>
