@@ -23,10 +23,10 @@ class Form extends Component{
     }
     Frameworks=(event)=>{
         this.setState({
-            farmework:event.target.value
+            framework:event.target.value
         })
     }
-    Submit=(event)=>{
+    Submit=(event)=>{       
         alert(`${this.state.username} ${this.state.framework} ${this.state.comment}  `)
     }
     render(){
@@ -44,7 +44,7 @@ class Form extends Component{
                 <div>
                     <label>javascript frame works</label>
                     <select value={this.state.framework} onChange={this.Frameworks}>
-                        <option value="React">React</option>
+                        <option value="React" selected>React</option>
                         <option value="Angular">Angular</option>
                         <option value="Nextjs">Nextjs</option>
                     </select>

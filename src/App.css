@@ -1,5 +1,10 @@
-.App {
-  text-align: center;
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #f0f0f0;
 }
 
 .App-logo {
@@ -39,7 +44,4 @@
 h1{
   align-content:center;
 }
-.na{
-padding: 30px;
-color: aqua;
-}
+
