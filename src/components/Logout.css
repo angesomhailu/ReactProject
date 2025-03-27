@@ -4,17 +4,35 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #0061f2 0%, #00c6f9 100%);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.logout-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
 }
 
 .logout-card {
-  background: white;
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 400px;
   width: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: formAppear 0.5s ease forwards;
 }
 
 .logout-icon {
@@ -63,22 +81,24 @@
 }
 
 .logout-btn {
-  background-color: #dc3545;
+  background: linear-gradient(to right, #dc3545, #ff6b6b);
   color: white;
 }
 
 .logout-btn:hover:not(:disabled) {
-  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(220, 53, 69, 0.2);
 }
 
 .cancel-btn {
-  background-color: #f8f9fa;
+  background: rgba(255, 255, 255, 0.9);
   color: #333;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .cancel-btn:hover:not(:disabled) {
-  background-color: #e2e6ea;
+  background: #f8f9fa;
+  transform: translateY(-2px);
 }
 
 .logout-btn:disabled,
@@ -88,12 +108,12 @@
 }
 
 .logout-btn.loading {
-  background-color: #dc3545;
+  background: linear-gradient(to right, #dc3545, #ff6b6b);
   cursor: not-allowed;
 }
 
 .logout-footer {
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 20px;
 }
 
@@ -108,28 +128,28 @@
 }
 
 .logout-footer i {
-  color: #007bff;
+  color: #0061f2;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
-/* Loading spinner animation */
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  100% {
-    transform: rotate(360deg);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -141,6 +161,7 @@
 @media (max-width: 480px) {
   .logout-card {
     padding: 30px 20px;
+    margin: 20px;
   }
 
   .logout-icon {

@@ -21,47 +21,65 @@ const App =()=>{
         <Router>
           <div>
            
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-             <div class="container-fluid">
-          <Link class="navbar-brand" ><h3>Angesom Car Rental</h3></Link>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <Link to='/' class="nav-link active" aria-current="page" ><h5>Home</h5></Link>
-              </li>
-              <li class="nav-item">
-                <Link to='/components/ContactUs' class="nav-link" ><h5>Contact</h5></Link>
-              </li>
-              <li class="nav-item">
-                <Link  to='/components/Services' class="nav-link" ><h5>Services</h5></Link>
-              </li>
-              <li class="nav-item">
-                <Link to='/components/About' class="nav-link" ><h5>About</h5></Link>
-              </li>
-              <li class="nav-item">
-                <Link to='/components/Register' class="nav-link" ><h5>Register</h5></Link>
-              </li>
-              <li class="nav-item">
-                <Link to='/components/Login' class="nav-link" ><h5>Login</h5></Link>
-              </li>
-            
-              <li class="nav-item dropdown text-align float-end">
-                <Link class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <h6>Information</h6>
-                </Link>
-                <ul class="dropdown-menu">
-                  <li><Link to='/components/Settings' class="dropdown-item" ><h5>Setting</h5></Link></li>
-                  <li><Link to='/components/Profile'class="dropdown-item" ><h5>Profile</h5></Link></li>
-                  <li><Link to='/components/Logout' class="dropdown-item" ><h5>Logout</h5></Link></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+                <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                  <div className="container-fluid">
+                    <div className="dropdown">
+                      <Link to="/" className="navbar-brand dropdown-toggle" 
+                        style={{color: 'blue', transition: '0.3s'}}
+                        onMouseEnter={(e) => e.target.style.color = '#3498db'} 
+                        onMouseLeave={(e) => e.target.style.color = '#2c3e50'}
+                        role="button" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false"
+                      >
+                        <h3>Angesom Car Rental</h3>
+                      </Link>
+                      <ul className="dropdown-menu">
+                        <li><Link className="dropdown-item" to="/cars">Our Cars</Link></li>
+                        <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
+                        <li><Link className="dropdown-item" to="/locations">Locations</Link></li>
+                      </ul>
+                    </div>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul className="navbar-nav me-auto">
+                        <li className="nav-item">
+                          <Link to='/' className="nav-link active" style={{color: '#2c3e50', transition: '0.3s', padding: '0 60px 20px '}} onMouseEnter={(e) => e.target.style.color = '#e74c3c'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'} aria-current="page"><h5>Home</h5></Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to='/components/ContactUs' className="nav-link active" style={{color: '#2c3e50', transition: '0.3s', padding: '0 30px 20px '}} onMouseEnter={(e) => e.target.style.color = '#e74c3c'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'}><h5>Contact</h5></Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to='/components/Services' className="nav-link active" style={{color: '#2c3e50', transition: '0.3s', padding: '0 30px 20px '}} onMouseEnter={(e) => e.target.style.color = '#e74c3c'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'} ><h5>Services</h5></Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to='/components/About' className="nav-link active" style={{color: '#2c3e50', transition: '0.3s', padding: '0 30px 20px '}} onMouseEnter={(e) => e.target.style.color = '#e74c3c'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'}><h5>About</h5></Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to='/components/Register' className="nav-link" style={{color: '#2c3e50', transition: '0.3s'}} onMouseEnter={(e) => e.target.style.color = '#e74c3c'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'}><h5>Register</h5></Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link to='/components/Login' className="nav-link" style={{color: '#2c3e50', transition: '0.3s'}} onMouseEnter={(e) => e.target.style.color = '#e74c3c'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'}    ><h5>Login</h5></Link>
+                        </li>
+                      </ul>
+                      <form className="navbar-nav">
+                        <li className="nav-item dropdown">
+                          <Link className="nav-link dropdown-toggle active" style={{color: '#2c3e50', transition: '0.3s'}} onMouseEnter={(e) => e.target.style.color = '#e74c3c'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'} role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <h6>Account</h6>
+                          </Link>
+                          <ul className="dropdown-menu dropdown-menu-end">
+                            <li><Link to='/components/Settings' style={{color: 'aqua  ', transition: '0.3s'}} onMouseEnter={(e) => e.target.style.color = 'aqua'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'}   className="dropdown-item"><h5>Settings</h5></Link></li>
+                            <li><Link to='/components/Profile' style={{color: 'aqua', transition: '0.3s'}} onMouseEnter={(e) => e.target.style.color = 'aqua'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'} className="dropdown-item"><h5>Profile</h5></Link></li>
+                            <li><hr className="dropdown-divider"/></li>
+                            <li><Link to='/components/Logout' style={{color: 'aqua', transition: '0.3s'}} onMouseEnter={(e) => e.target.style.color = 'aqua'} onMouseLeave={(e) => e.target.style.color = '#2c3e50'} className="dropdown-item"><h5>Logout</h5></Link></li>
+                          </ul>
+                        </li>
+                      </form>
+                    </div>
+                  </div>
+                </nav>
           </div>
           
           <Routes>
