@@ -17,45 +17,45 @@ import Logout from './components/Logout';
 const App =()=>{
  
     return (
-      <div className='App'> 
+      <div > 
         <Router>
-          <div className='nav'>
+          <div>
            
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <Link class="navbar-brand" ><h3>ANGESOM CAR RENTAL</h3></Link>
+             <div class="container-fluid">
+          <Link class="navbar-brand" ><h3>Angesom Car Rental</h3></Link>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <Link to='/' class="nav-link active" aria-current="page" >Home</Link>
+                <Link to='/' class="nav-link active" aria-current="page" ><h5>Home</h5></Link>
               </li>
               <li class="nav-item">
-                <Link to='/components/ContactUs' class="nav-link" >Contact</Link>
+                <Link to='/components/ContactUs' class="nav-link" ><h5>Contact</h5></Link>
               </li>
               <li class="nav-item">
-                <Link  to='/components/Services' class="nav-link" >Services</Link>
+                <Link  to='/components/Services' class="nav-link" ><h5>Services</h5></Link>
               </li>
               <li class="nav-item">
-                <Link to='/components/About' class="nav-link" >About</Link>
+                <Link to='/components/About' class="nav-link" ><h5>About</h5></Link>
               </li>
               <li class="nav-item">
-                <Link to='/components/Register' class="nav-link" >Register</Link>
+                <Link to='/components/Register' class="nav-link" ><h5>Register</h5></Link>
               </li>
               <li class="nav-item">
-                <Link to='/components/Login' class="nav-link" >Login</Link>
+                <Link to='/components/Login' class="nav-link" ><h5>Login</h5></Link>
               </li>
             
               <li class="nav-item dropdown text-align float-end">
                 <Link class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  info
+                <h6>Information</h6>
                 </Link>
                 <ul class="dropdown-menu">
-                  <li><Link to='/components/Settings' class="dropdown-item" >Setting</Link></li>
-                  <li><Link to='/components/Profile'class="dropdown-item" >Profile</Link></li>
-                  <li><Link to='/components/Logout' class="dropdown-item" >Logout</Link></li>
+                  <li><Link to='/components/Settings' class="dropdown-item" ><h5>Setting</h5></Link></li>
+                  <li><Link to='/components/Profile'class="dropdown-item" ><h5>Profile</h5></Link></li>
+                  <li><Link to='/components/Logout' class="dropdown-item" ><h5>Logout</h5></Link></li>
                 </ul>
               </li>
             </ul>
