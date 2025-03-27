@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
+  background: linear-gradient(135deg, rgba(0, 97, 242, 0.05) 0%, rgba(0, 198, 249, 0.05) 100%);
 }
 
 .profile-header {
@@ -9,16 +10,29 @@
   align-items: center;
   gap: 30px;
   margin-bottom: 40px;
-  padding: 30px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  background: linear-gradient(135deg, #0061f2 0%, #00c6f9 100%);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 97, 242, 0.2);
+}
+
+.profile-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .profile-avatar {
   position: relative;
   width: 150px;
   height: 150px;
+  z-index: 1;
 }
 
 .profile-avatar img {
@@ -26,6 +40,8 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .edit-avatar {
@@ -35,29 +51,37 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #007bff;
+  background: #00c6f9;
   color: white;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .edit-avatar:hover {
-  background: #0056b3;
+  transform: scale(1.1);
+  background: #0061f2;
+}
+
+.profile-info {
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .profile-info h1 {
-  font-size: 2rem;
-  color: #333;
+  font-size: 2.5rem;
   margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .member-since {
-  color: #666;
   font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 .profile-content {
@@ -68,33 +92,47 @@
 .profile-section {
   background: white;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .profile-section h2 {
   color: #333;
   margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  font-size: 1.8rem;
 }
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
+.info-item {
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(0, 97, 242, 0.03) 0%, rgba(0, 198, 249, 0.03) 100%);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+}
+
 .info-item label {
-  display: block;
   color: #666;
-  margin-bottom: 5px;
   font-size: 0.9rem;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .info-item p {
   color: #333;
   font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
 }
 
 .rental-list {
@@ -103,9 +141,14 @@
 }
 
 .rental-card {
-  border: 1px solid #eee;
-  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0, 97, 242, 0.02) 0%, rgba(0, 198, 249, 0.02) 100%);
   padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.rental-card:hover {
+  transform: translateY(-5px);
 }
 
 .rental-header {
@@ -121,20 +164,20 @@
 }
 
 .status {
-  padding: 5px 12px;
-  border-radius: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
 }
 
 .status.completed {
-  background: #e8f5e9;
-  color: #2e7d32;
+  background: #28a745;
+  color: white;
 }
 
 .status.upcoming {
-  background: #e3f2fd;
-  color: #1976d2;
+  background: #0061f2;
+  color: white;
 }
 
 .rental-details {
@@ -172,17 +215,19 @@
   align-items: center;
   gap: 10px;
   padding: 15px;
-  background: #f8f9fa;
+  background: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   color: #333;
-  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .action-btn:hover {
-  background: #007bff;
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #0061f2 0%, #00c6f9 100%);
   color: white;
 }
 
@@ -190,26 +235,35 @@
   font-size: 1.2rem;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .profile-header {
     flex-direction: column;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
   }
 
   .profile-info h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
-  .rental-details {
-    flex-direction: column;
-    gap: 15px;
+  .profile-section {
+    padding: 20px;
   }
 
-  .rental-dates {
-    flex-direction: column;
-    gap: 10px;
+  .info-grid {
+    grid-template-columns: 1fr;
   }
 
   .action-buttons {

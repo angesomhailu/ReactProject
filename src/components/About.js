@@ -1,5 +1,14 @@
 import React from 'react';
 import './About.css';
+import person1 from '../components/Personphoto/person1.jpg';
+import person2 from '../components/Personphoto/person2.jpg';
+import person3 from '../components/Personphoto/person3.jpg';
+import person4 from '../components/Personphoto/person4.jpg';
+import person5 from '../components/Personphoto/person5.jpg';
+// import car1 from '../components/Carphoto/car1.jpg';
+// import car2 from '../components/Carphoto/car2.jpg';
+// import car3 from '../components/Carphoto/car3.jpg';
+// import car4 from '../components/Carphoto/car4.jpg'; 
 
 const About = () => {
   const stats = [
@@ -13,20 +22,32 @@ const About = () => {
     {
       name: 'John Smith',
       position: 'CEO & Founder',
-      image: 'https://via.placeholder.com/150',
+      image: person1,
       description: 'With over 15 years in the automotive industry, John leads our company with passion and innovation.'
     },
     {
       name: 'Sarah Johnson',
       position: 'Operations Manager',
-      image: 'https://via.placeholder.com/150',
+      image: person4,
       description: 'Sarah ensures smooth operations and exceptional service delivery across all our locations.'
     },
     {
       name: 'Michael Chen',
       position: 'Fleet Manager',
-      image: 'https://via.placeholder.com/150',
+      image: person2,
       description: 'Michael oversees our diverse fleet of vehicles, ensuring top-notch maintenance and quality.'
+    },
+    {
+      name: 'Emily Davis',
+      position: 'Customer Relations',
+      image: person3,
+      description: 'Emily ensures our customers receive the best possible service experience.'
+    },
+    {
+      name: 'David Wilson',
+      position: 'Technical Manager',
+      image: person5,
+      description: 'David leads our technical team ensuring all vehicles meet our high standards.'
     }
   ];
 

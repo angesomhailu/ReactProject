@@ -1,6 +1,6 @@
 import React from 'react';
 import './Profile.css';
-
+import person3 from '../components/Personphoto/person3.jpg';
 const Profile = () => {
   const userInfo = {
     name: 'John Doe',
@@ -41,7 +41,7 @@ const Profile = () => {
     <div className="profile-container">
       <div className="profile-header">
         <div className="profile-avatar">
-          <img src="https://via.placeholder.com/150" alt="Profile" />
+          <img src={person3} alt="Profile" />
           <button className="edit-avatar">
             <i className="fas fa-camera"></i>
           </button>

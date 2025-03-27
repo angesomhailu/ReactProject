@@ -11,9 +11,13 @@ const Logout = () => {
     // Add your logout logic here
     // For example: clear local storage, reset auth state, etc.
     setTimeout(() => {
-      // Simulate logout process
-      console.log('User logged out');
-      navigate('/login');
+
+      setIsLoading(false);
+
+      // Navigate to login page
+
+      navigate('/components/Login'); // Update this path to match your route configuration
+
     }, 1500);
   };
 

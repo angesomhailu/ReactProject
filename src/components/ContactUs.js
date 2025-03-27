@@ -46,7 +46,7 @@ const Contact = () => {
               <i className="fas fa-phone"></i>
               <div>
                 <h3>Phone</h3>
-                <p>+1 (234) 567-8900</p>
+                <p>+251 96 352 0384</p>
               </div>
             </div>
 
@@ -54,7 +54,7 @@ const Contact = () => {
               <i className="fas fa-envelope"></i>
               <div>
                 <h3>Email</h3>
-                <p>support@carrent.com</p>
+                <p>angesomhailu1414@gmail.com</p>
               </div>
             </div>
           </div>
